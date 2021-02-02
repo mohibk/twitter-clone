@@ -4,6 +4,10 @@ import Post from './Post';
 import TweetBox from './TweetBox';
 import db from '../firebase';
 import FlipMove from 'react-flip-move';
+import HomeIcon from '@material-ui/icons/Home';
+import SearchIcon from '@material-ui/icons/Search';
+import NotificationsNoneIcon from '@material-ui/icons/NotificationsNone';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -35,6 +39,12 @@ const Feed = () => {
           />
         ))}
       </FlipMove>
+      <div className="feed__footer">
+        <HomeIcon className="feed__footerIcon" />
+        <SearchIcon className="feed__footerIcon" />
+        <NotificationsNoneIcon className="feed__footerIcon" />
+        <MailOutlineIcon className="feed__footerIcon" />
+      </div>
     </div>
   );
 };
